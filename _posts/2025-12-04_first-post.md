@@ -1,7 +1,7 @@
 ---
 title: 'Preview Mode for Static Generation'
-description: 'A comprehensive guide'
-date: '2020-03-16'
+description: 'Now that the blog data is parsed, we need to add it to our index page (pages/index.js). We can do this with a Next.js data fetching method called getStaticProps(). In the next section, well learn how to implement getStaticProps().'
+date: '2025-12-05'
 category: 'tech'
 ---
 

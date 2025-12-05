@@ -1,7 +1,7 @@
 ---
 title: 'Example content'
-description: 'Example content'
-date: '2020-03-16'
+description: 'The blog posts in our example will be stored as local markdown files in our applications directory (not fetched from an external data source), so well need to read the data from the file system.'
+date: '2025-12-03'
 category: 'tech'
 ---
 

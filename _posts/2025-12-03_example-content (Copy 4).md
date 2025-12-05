@@ -1,7 +1,7 @@
 ---
 title: 'Example content'
-description: 'Example content'
-date: '2020-03-16'
+description: 'Howdy! This is an example blog post that shows several types of HTML content supported in this theme.'
+date: '2025-12-04'
 category: 'tech'
 ---
 
