@@ -6,10 +6,11 @@ import { SITE_CONFIG } from './site-config';
 
 const postsDirectory = path.join(process.cwd(), '_posts');
 let cachedPosts: Post[] | null = null;
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 function getAllPosts(): Post[] {
   // Check cached posts first
-  if (cachedPosts) {
+  if (!isDevelopment && cachedPosts) {
     return cachedPosts;
   }
   // Check if directory exists
@@ -65,7 +66,9 @@ function getAllPosts(): Post[] {
   });
 
   // Cache the result
-  cachedPosts = sortedPosts;
+  if (!isDevelopment) {
+    cachedPosts = sortedPosts;
+  }
   return sortedPosts;
 }
 
