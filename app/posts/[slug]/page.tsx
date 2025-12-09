@@ -4,6 +4,7 @@ import { formatDate } from '@/lib/utils';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export async function generateMetadata({
   params,
@@ -45,8 +46,8 @@ export default async function PostPage({
         >
           {formatDate(post.date)}
         </time>
-        <div className="text-[var(--text-primary)]">
-          <Markdown>{post.content}</Markdown>
+        <div className="markdown-content">
+          <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
         </div>
         <BackButton />
       </article>

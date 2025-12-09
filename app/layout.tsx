@@ -1,11 +1,13 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import { SITE_CONFIG } from '@/lib/site-config';
 import type { Metadata } from 'next';
-import { Merriweather } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
 import './globals.css';
+import './markdown.css';
 
-const merriweather = Merriweather({
+const openSans = Open_Sans({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
@@ -27,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${merriweather.className} flex min-h-screen flex-col antialiased`}
+        className={`${openSans.className} flex min-h-screen flex-col antialiased`}
       >
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

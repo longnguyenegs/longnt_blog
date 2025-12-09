@@ -1,0 +1,159 @@
+/* MARKDOWN CONTENT STYLING */
+
+.markdown-content {
+  color: var(--text-primary);
+  line-height: 1.75;
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--text-primary);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.025rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+
+  /* Paragraphs */
+  p {
+    margin-bottom: 1.5rem;
+  }
+  /* Links */
+  a {
+    color: inherit;
+    text-decoration: underline;
+    transition: color var(--transition);
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  /* Emphasis */
+  strong {
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  /* Lists */
+  ul,
+  ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+
+    > ul,
+    > ol {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 0.25rem solid var(--border-color);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.375rem;
+    margin: 1.5rem 0;
+  }
+
+  /* Horizontal Rules */
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+
+    th,
+    td {
+      border: 1px solid var(--border-color);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--bg-secondary);
+      font-weight: 700;
+    }
+  }
+
+  /* Code blocks (inline and block) */
+  code {
+    font-family: ui-monospace, monospace;
+    font-size: 0.875em;
+  }
+
+  :not(pre) > code {
+    background-color: var(--bg-secondary);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  pre {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+
+    code {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+}
