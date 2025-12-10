@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
 
   // Blog settings
   url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  postsPerPage: 5,
+  postsPerPage: 10,
 
   // Categories
   categories: [] as const,
