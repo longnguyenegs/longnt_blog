@@ -6,9 +6,9 @@
   --bg-primary: #ffffff;
   --bg-secondary: #f9f9f9;
 
-  --text-primary: #2c343c;
-  --text-secondary: #677387;
-  --text-muted: #515151;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #9ca3af;
 
   --border-color: #e5e5e5;
 
@@ -22,10 +22,10 @@
 
 /* Dark Mode Variables */
 .dark {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #202020;
+  --bg-primary: #161d26;
+  --bg-secondary: #1f2934;
 
-  --text-primary: #e0e0e0;
+  --text-primary: #f0f0f0;
   --text-secondary: #b0b0b0;
   --text-muted: #707070;
 
@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   line-height: 1.5;
   letter-spacing: -0.025rem;

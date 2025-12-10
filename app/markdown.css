@@ -1,5 +1,4 @@
 /* MARKDOWN CONTENT STYLING */
-
 .markdown-content {
   color: var(--text-primary);
   line-height: 1.75;
@@ -12,35 +11,31 @@
   h5,
   h6 {
     color: var(--text-primary);
-    font-weight: 700;
-    line-height: 1.25;
+    font-weight: 600;
+    line-height: 2;
     letter-spacing: -0.025rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.875rem;
   }
   h2 {
-    font-size: 2rem;
-  }
-  h3 {
     font-size: 1.5rem;
   }
-  h4 {
+  h3 {
     font-size: 1.25rem;
   }
-  h5 {
-    font-size: 1rem;
+  h4 {
+    font-size: 1.125rem;
   }
+  h5,
   h6 {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   /* Paragraphs */
   p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   /* Links */
   a {
@@ -56,7 +51,7 @@
 
   /* Emphasis */
   strong {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-primary);
   }
 
@@ -110,7 +105,7 @@
   hr {
     border: none;
     border-top: 1px solid var(--border-color);
-    margin: 2rem 0;
+    margin: 1.5rem 0;
   }
 
   /* Tables */
@@ -128,7 +123,7 @@
 
     th {
       background-color: var(--bg-secondary);
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 

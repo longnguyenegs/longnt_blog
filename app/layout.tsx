@@ -8,7 +8,7 @@ import './globals.css';
 import './markdown.css';
 
 const openSans = Open_Sans({
-  weight: ['400', '700'],
+  weight: ['400', '600'],
   subsets: ['latin'],
   display: 'swap',
   preload: true,

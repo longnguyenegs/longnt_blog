@@ -20,7 +20,7 @@ export default function Pagination({
   const hasNext = currentPage < totalPage;
 
   return (
-    <nav className="flex items-center justify-between border-t border-[var(--border-color)] py-4">
+    <nav className="flex items-center justify-between border-t border-[var(--border-color)] py-4 lg:py-8">
       {/* Previous link */}
       <div>
         {hasPrev ? (
@@ -31,12 +31,12 @@ export default function Pagination({
             Newer
           </Link>
         ) : (
-          <span className="text-lg text-[var(--text-secondary)]">Newer</span>
+          <span className="text-lg text-[var(--text-muted)]">Newer</span>
         )}
       </div>
 
       {/* Page indicator */}
-      <span className="text-base text-[var(--text-muted)]">
+      <span className="text-base text-[var(--text-secondary)]">
         {currentPage}/{totalPage}
       </span>
 
@@ -47,7 +47,7 @@ export default function Pagination({
             Older
           </Link>
         ) : (
-          <span className="text-lg text-[var(--text-secondary)]">Older</span>
+          <span className="text-lg text-[var(--text-muted)]">Older</span>
         )}
       </div>
     </nav>

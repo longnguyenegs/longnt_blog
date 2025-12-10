@@ -37,11 +37,11 @@ export default async function PostPage({
   }
 
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-12">
+    <div className="container mx-auto max-w-3xl px-4 py-8">
       <article>
         <h2 className="text-3xl font-bold">{post.title}</h2>
         <time
-          className="mb-4 block text-sm text-[var(--text-muted)]"
+          className="mb-4 block text-sm text-[var(--text-secondary)]"
           dateTime={post.date}
         >
           {formatDate(post.date)}
