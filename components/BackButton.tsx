@@ -8,7 +8,7 @@ export default function BackButton() {
   return (
     <button
       onClick={() => router.back()}
-      className="mt-8 inline-flex cursor-pointer items-center text-[var(--link-primary)] hover:underline"
+      className="mt-8 inline-flex cursor-pointer items-center text-[var(--text-primary)] hover:underline"
     >
       <svg
         width="16"
