@@ -2,9 +2,8 @@ import BackButton from '@/components/BackButton';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
 import { formatDate } from '@/lib/utils';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
-import Markdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 export async function generateMetadata({
   params,
@@ -23,6 +22,20 @@ export async function generateMetadata({
     description: post.description,
   };
 }
+
+// Lazy load react-markdown and remark-gfm together
+const MarkdownRenderer = dynamic(
+  async () => {
+    const { default: Markdown } = await import('react-markdown');
+    const { default: remarkGfm } = await import('remark-gfm');
+
+    // Return a component that combines both
+    return function MarkdownWithGfm({ children }: { children: string }) {
+      return <Markdown rehypePlugins={[remarkGfm]}>{children}</Markdown>;
+    };
+  },
+  { ssr: true }
+);
 
 export default async function PostPage({
   params,
@@ -47,7 +60,7 @@ export default async function PostPage({
           {formatDate(post.date)}
         </time>
         <div className="markdown-content">
-          <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
+          <MarkdownRenderer>{post.content}</MarkdownRenderer>
         </div>
         <BackButton />
       </article>
